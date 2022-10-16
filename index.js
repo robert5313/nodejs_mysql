@@ -33,8 +33,8 @@ request('https://datausa.io/api/data?drilldowns=State&measures=Population&year=2
     const population = product.Population;
     const slug_state = product['Slug State'];
      
-    //To connect to your database just uncomment the sql query
-   // var sql = connection.query("INSERT INTO rest (id,id_state,state,id_year,year,population,slug_state) VALUES ('','"+id_state+"', '"+state+"', '"+id_year+"', '"+year+"', '"+population+"', '"+slug_state+"')");
+   
+    var sql = connection.query("INSERT INTO rest (id,id_state,state,id_year,year,population,slug_state) VALUES ('','"+id_state+"', '"+state+"', '"+id_year+"', '"+year+"', '"+population+"', '"+slug_state+"')");
     console.log(product);
   }
 });
